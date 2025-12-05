@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hanis Hasmira Haliza | Portfolio</title>
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Accessibility -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================================================
+     NAVIGATION BAR
+=================================================== -->
+<header class="site-header">
+
+      <!-- Dark Mode Toggle -->
+    <button id="darkToggle" class="nav-dark-btn" aria-label="Toggle Dark Mode">🌙</button>
+
+  <div class="container nav-flex">
+
+<nav class="nav-links">
+    <a href="#home" class="nav-item">Home</a>
+    <a href="#about" class="nav-item">About Me</a>
+    <a href="#education" class="nav-item">Education</a>
+    <a href="#skills" class="nav-item">Skills</a>
+    <a href="#projects" class="nav-item">Projects</a>
+    <a href="#achievements" class="nav-item">Achievements</a>
+</nav>
+
+
+
+
+  </div>
+</header>
+
+<!-- ===================================================
+     MAIN CONTENT
+=================================================== -->
+<main id="main">
+
+<!-- ===================================================
+     HERO SECTION
+=================================================== -->
+<section id="home" class="hero">
+  <!-- Glow Effects -->
+  <div class="hero-glow glow-1"></div>
+  <div class="hero-glow glow-2"></div>
+
+  <div class="container hero-grid">
+
+    <div class="hero-text">
+      <h1>Hello — I’m <span>Hanis Hasmira Haliza</span></h1>
+      <p class="tagline">Computer Science Student</p>
+      <p class="sub">Blending art and technology to bring game concepts and digital media to life.</p>
+    </div>
+
+    <figure class="hero-image floating">
+      <img src="hanis_image_heroes.jpeg" alt="Portrait of Hanis Hasmira Haliza">
+    </figure>
+
+  </div>
+
+  <div class="scroll-caption">About Me</div>
+
+  <button id="scrollDownBtn" class="scroll-down" aria-label="Scroll Down">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14"></path>
+      <path d="m19 12-7 7-7-7"></path>
+    </svg>
+  </button>
+</section>
+
+<!-- ===================================================
+     ABOUT SECTION
+=================================================== -->
+<section id="about" class="section">
+  <div class="container about-grid">
+
+    <aside class="about-photo-card">
+      <img src="hanis_image.jpeg" alt="Portrait of Hanis Hasmira Haliza">
+    </aside>
+
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I am a Computer Science student majoring in Multimedia Computing at UNIMAS. I enjoy working on anything related to digital creativity, whether it involves designing visuals, exploring UI/UX ideas, or developing simple interactive projects. I love combining creativity with technology and continuously improving my skills through hands-on practice.</p>
+      <p>I am also active in sports, especially netball, and have represented my faculty as well as my previous schools in various tournaments and competitions. Participating in sports has taught me discipline, teamwork, and leadership, which continue to help me balance both academic and extracurricular commitments.</p>
+      <p>Moving forward, I hope to grow in fields that blend creativity, technology, and collaboration. My goal is to contribute to projects that allow me to express ideas visually while working effectively within a team environment.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================
+     EDUCATION SECTION
+=================================================== -->
+<section id="education" class="section">
+  <div class="container">
+    <h2>Education</h2>
+
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <h3>SK Seri Kundang</h3>
+        <p>2009 – 2015</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>SMK Seri Kundang</h3>
+        <p>2016 – 2020</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Malacca Matriculation College</h3>
+        <p>Physical Science</p>
+        <p>2021 – 2023</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Universiti Malaysia Sarawak</h3>
+        <p>Bachelor of Computer Science (Multimedia Computing)</p>
+        <p>2023 – Present</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================
+     SKILLS SECTION
+=================================================== -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-card"><h3>HTML & CSS</h3><p>Clean and responsive layouts.</p></div>
+      <div class="skill-card"><h3>JavaScript</h3><p>Interactive and dynamic UI.</p></div>
+      <div class="skill-card"><h3>Kotlin</h3><p>Simple Android apps.</p></div>
+      <div class="skill-card"><h3>C# (Game Development)</h3><p>Create game mechanics & UI elements.</p></div>
+      <div class="skill-card"><h3>C Programming</h3><p>Structured programming & logic solving.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================
+     PROJECTS SECTION
+=================================================== -->
+<section id="projects" class="section">
+  <div class="container">
+      <h2>Projects</h2>
+
+      <!-- JS inserts project cards here -->
+      <div id="projectsGrid" class="card-grid"></div>
+  </div>
+</section>
+
+<!-- -------- PROJECT MODAL -------- -->
+<div id="projectModal" class="project-modal" aria-hidden="true">
+  <div class="project-modal-content" role="dialog" aria-modal="true">
+    <button id="pmClose" class="pm-close" aria-label="Close">✕</button>
+    <img id="pmImg" class="pm-img" alt="">
+    <h3 id="pmTitle"></h3>
+    <p id="pmFull"></p>
+  </div>
+</div>
+
+<!-- ===================================================
+     ACHIEVEMENTS SECTION
+=================================================== -->
+<section id="achievements" class="section">
+  <div class="container">
+    <h2>Achievements</h2>
+    <div id="achPreview" class="ach-preview-grid"></div>
+
+    <div class="ach-btn-center">
+      <button id="achFullBtn">Show Full Achievement</button>
+    </div>
+  </div>
+</section>
+
+<!-- -------- ACHIEVEMENT LIGHTBOX -------- -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-content">
+
+    <button id="lbClose" class="lb-close" aria-label="Close">✕</button>
+
+    <img id="lbImg" class="lightbox-img" alt="">
+    <div id="lbCaption" class="lb-caption"></div>
+
+    <button id="lbPrev" class="lb-nav">❮</button>
+    <button id="lbNext" class="lb-nav">❯</button>
+
+  </div>
+</div>
+
+<!-- ===================================================
+     CONTACT SECTION
+=================================================== -->
+<section id="contact" class="section">
+  <div class="container contact-container">
+
+    <!-- LEFT: FORM -->
+    <div class="contact-left">
+      <h2>Contact</h2>
+      <p class="contact-sub">Feel free to send me a message.</p>
+
+      <form id="contactForm" class="contact-form">
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+
+        <button type="submit" class="send-btn">Send Message</button>
+        <div id="formMsg" class="sent-msg"></div>
+      </form>
+    </div>
+
+    <!-- RIGHT: DETAILS -->
+    <div class="contact-right">
+      <div class="contact-card">
+        <h3>Contact Details</h3>
+
+        <p><strong>Email:</strong><br>
+          <a href="mailto:hanishasmira@gmail.com" id="realEmail" class="email-link">
+            hanishasmira@gmail.com
+          </a>
+        </p>
+
+        <p><strong>Location:</strong><br>Malaysia</p>
+
+        <p><strong>Availability:</strong><br>Open for academic projects & collaborations</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- Floating Contact Bubble -->
+<button id="contactBubble" class="contact-bubble floating-bubble" aria-label="Open Contact">📩</button>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© <span id="year"></span> Hanis Hasmira Haliza</p>
+</footer>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>
